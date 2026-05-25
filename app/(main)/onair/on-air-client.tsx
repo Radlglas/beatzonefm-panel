@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useTransition, useOptimistic } from "react";
+import { useState, useTransition } from "react";
 import { useNowPlaying } from "@/hooks/use-now-playing";
 import { useGreetings } from "@/hooks/use-greetings";
 import { toggleGreetings, toggleSongRequests } from "@/app/actions/studio";
-import { markGreetingRead, deleteGreeting } from "@/app/actions/greeting";
+import { db } from "@/lib/firebase";
+import { doc, updateDoc, deleteDoc } from "firebase/firestore";
 import {
   Radio, Headphones, Music2, MessageCircleHeart, Mic2,
   Check, Trash2, Clock, Users, BarChart3, Wifi,
@@ -95,17 +96,17 @@ export function OnAirClient({
     });
   }
 
-  function handleRead(id: number) {
+  function handleRead(id: string) {
     startTransition(async () => {
-      await markGreetingRead(id);
-      await refresh();
+      await updateDoc(doc(db, "greetings", id), { isRead: true });
+      refresh();
     });
   }
 
-  function handleDelete(id: number) {
+  function handleDelete(id: string) {
     startTransition(async () => {
-      await deleteGreeting(id);
-      await refresh();
+      await deleteDoc(doc(db, "greetings", id));
+      refresh();
     });
   }
 
