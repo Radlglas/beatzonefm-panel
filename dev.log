@@ -1,0 +1,698 @@
+  ▲ Next.js 14.2.3
+  - Local:        http://localhost:3001
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1550ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 1711ms (646 modules)
+ GET /login 200 in 1881ms
+ ✓ Compiled in 147ms (334 modules)
+ ✓ Compiled /api/auth/[...nextauth] in 266ms (552 modules)
+ GET /api/auth/session 200 in 586ms
+ GET /api/auth/session 200 in 9ms
+ GET /api/auth/providers 200 in 12ms
+ GET /api/auth/csrf 200 in 5ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`name` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 246ms
+ GET /api/auth/session 200 in 9ms
+ ✓ Compiled /dashboard in 481ms (1282 modules)
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`User`.`id` FROM `main`.`User` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE 1=1 ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` LEFT JOIN `main`.`User` AS `j1` ON (`j1`.`id`) = (`main`.`Show`.`moderatorId`) WHERE (`j1`.`name` = ? AND (`j1`.`id` IS NOT NULL)) ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+ GET /dashboard?_rsc=1g7dc 200 in 43ms
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`User`.`id` FROM `main`.`User` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE 1=1 ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` LEFT JOIN `main`.`User` AS `j1` ON (`j1`.`id`) = (`main`.`Show`.`moderatorId`) WHERE (`j1`.`name` = ? AND (`j1`.`id` IS NOT NULL)) ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+ GET /dashboard?_rsc=1g7dc 200 in 49ms
+ ✓ Compiled /api/greetings in 92ms (929 modules)
+prisma:query SELECT `main`.`Greeting`.`id`, `main`.`Greeting`.`senderName`, `main`.`Greeting`.`message`, `main`.`Greeting`.`songRequest`, `main`.`Greeting`.`isRead`, `main`.`Greeting`.`createdAt` FROM `main`.`Greeting` WHERE 1=1 ORDER BY `main`.`Greeting`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/greetings 200 in 144ms
+prisma:query SELECT `main`.`Greeting`.`id`, `main`.`Greeting`.`senderName`, `main`.`Greeting`.`message`, `main`.`Greeting`.`songRequest`, `main`.`Greeting`.`isRead`, `main`.`Greeting`.`createdAt` FROM `main`.`Greeting` WHERE 1=1 ORDER BY `main`.`Greeting`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/greetings 200 in 5ms
+ ✓ Compiled /onair in 236ms (1350 modules)
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ GET /onair 200 in 357ms
+prisma:query SELECT `main`.`Greeting`.`id`, `main`.`Greeting`.`senderName`, `main`.`Greeting`.`message`, `main`.`Greeting`.`songRequest`, `main`.`Greeting`.`isRead`, `main`.`Greeting`.`createdAt` FROM `main`.`Greeting` WHERE 1=1 ORDER BY `main`.`Greeting`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/greetings 200 in 14ms
+ GET /api/auth/session 200 in 25ms
+ GET /api/auth/session 200 in 24ms
+prisma:query SELECT `main`.`Greeting`.`id`, `main`.`Greeting`.`senderName`, `main`.`Greeting`.`message`, `main`.`Greeting`.`songRequest`, `main`.`Greeting`.`isRead`, `main`.`Greeting`.`createdAt` FROM `main`.`Greeting` WHERE 1=1 ORDER BY `main`.`Greeting`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/greetings 200 in 20ms
+prisma:query SELECT `main`.`Greeting`.`id`, `main`.`Greeting`.`senderName`, `main`.`Greeting`.`message`, `main`.`Greeting`.`songRequest`, `main`.`Greeting`.`isRead`, `main`.`Greeting`.`createdAt` FROM `main`.`Greeting` WHERE 1=1 ORDER BY `main`.`Greeting`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/greetings 200 in 5ms
+prisma:query SELECT `main`.`Greeting`.`id`, `main`.`Greeting`.`senderName`, `main`.`Greeting`.`message`, `main`.`Greeting`.`songRequest`, `main`.`Greeting`.`isRead`, `main`.`Greeting`.`createdAt` FROM `main`.`Greeting` WHERE 1=1 ORDER BY `main`.`Greeting`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/greetings 200 in 5ms
+ ✓ Compiled in 543ms (1426 modules)
+ ✓ Compiled /wuensche in 254ms (1441 modules)
+ GET /wuensche 200 in 453ms
+ ✓ Compiled /api/auth/[...nextauth] in 69ms (1038 modules)
+ GET /api/auth/session 200 in 122ms
+ GET /api/auth/session 200 in 4ms
+ GET /api/auth/session 200 in 4ms
+ ✓ Compiled /onair in 78ms (1073 modules)
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ GET /onair?_rsc=388j6 200 in 25ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `greetingsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 28ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `greetingsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 30ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 24ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 20ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 27ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 26ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 20ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 22ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 14ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 23ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 29ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 43ms
+ ✓ Compiled /gruss in 274ms (1492 modules)
+ GET /gruss 200 in 348ms
+ ✓ Compiled /api/studio-settings in 92ms (1106 modules)
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /api/studio-settings 200 in 218ms
+ GET /api/auth/session 200 in 217ms
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /api/studio-settings 200 in 6ms
+ GET /api/auth/session 200 in 7ms
+ GET /api/auth/session 200 in 4ms
+ GET /api/auth/session 200 in 4ms
+ GET /api/auth/session 200 in 9ms
+ GET /api/auth/session 200 in 5ms
+ ✓ Compiled in 295ms (1532 modules)
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ GET /onair?_rsc=1d9g1 200 in 29ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `greetingsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 29ms
+ GET /gruss 200 in 83ms
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /api/studio-settings 200 in 10ms
+ GET /api/auth/session 200 in 13ms
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /api/studio-settings 200 in 6ms
+ GET /api/auth/session 200 in 5ms
+ GET /api/auth/session 200 in 5ms
+ GET /api/auth/session 200 in 4ms
+ GET /api/auth/session 200 in 7ms
+ GET /api/auth/session 200 in 4ms
+ GET /api/auth/session 200 in 4ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 19ms
+ GET /api/auth/session 200 in 9ms
+ GET /api/auth/session 200 in 4ms
+ GET /api/auth/session 200 in 4ms
+ GET /gruss 200 in 80ms
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /api/studio-settings 200 in 7ms
+ GET /api/auth/session 200 in 11ms
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /api/studio-settings 200 in 7ms
+ GET /api/auth/session 200 in 7ms
+ GET /api/auth/session 200 in 4ms
+ GET /api/auth/session 200 in 4ms
+ GET /api/auth/session 200 in 8ms
+ GET /api/auth/session 200 in 5ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `greetingsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 17ms
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `songRequestsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 19ms
+ ✓ Compiled /admin in 344ms (1655 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE 1=1 ORDER BY `main`.`User`.`role` ASC, `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE `main`.`Show`.`moderatorId` IN (?,?,?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Warning`.`id`, `main`.`Warning`.`reason`, `main`.`Warning`.`userId`, `main`.`Warning`.`issuedBy`, `main`.`Warning`.`createdAt` FROM `main`.`Warning` WHERE `main`.`Warning`.`userId` IN (?,?,?) ORDER BY `main`.`Warning`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+ GET /admin?_rsc=13g80 200 in 38ms
+ ✓ Compiled in 237ms (1661 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE 1=1 ORDER BY `main`.`User`.`role` ASC, `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE `main`.`Show`.`moderatorId` IN (?,?,?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Warning`.`id`, `main`.`Warning`.`reason`, `main`.`Warning`.`userId`, `main`.`Warning`.`issuedBy`, `main`.`Warning`.`createdAt` FROM `main`.`Warning` WHERE `main`.`Warning`.`userId` IN (?,?,?) ORDER BY `main`.`Warning`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+ GET /admin?_rsc=oma0u 200 in 29ms
+ ✓ Compiled in 204ms (1661 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE 1=1 ORDER BY `main`.`User`.`role` ASC, `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE `main`.`Show`.`moderatorId` IN (?,?,?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Warning`.`id`, `main`.`Warning`.`reason`, `main`.`Warning`.`userId`, `main`.`Warning`.`issuedBy`, `main`.`Warning`.`createdAt` FROM `main`.`Warning` WHERE `main`.`Warning`.`userId` IN (?,?,?) ORDER BY `main`.`Warning`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+ GET /admin?_rsc=1b4nq 200 in 39ms
+ ✓ Compiled in 185ms (1661 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE 1=1 ORDER BY `main`.`User`.`role` ASC, `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE `main`.`Show`.`moderatorId` IN (?,?,?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Warning`.`id`, `main`.`Warning`.`reason`, `main`.`Warning`.`userId`, `main`.`Warning`.`issuedBy`, `main`.`Warning`.`createdAt` FROM `main`.`Warning` WHERE `main`.`Warning`.`userId` IN (?,?,?) ORDER BY `main`.`Warning`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+ GET /admin?_rsc=1b4nq 200 in 29ms
+ GET /api/auth/session 200 in 11ms
+ GET /api/auth/session 200 in 4ms
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `greetingsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 27ms
+ ✓ Compiled /sendeplan in 372ms (1645 modules)
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE 1=1 ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+ GET /sendeplan?_rsc=piucm 200 in 47ms
+ GET /api/auth/session 200 in 12ms
+ GET /api/auth/session 200 in 5ms
+ GET /api/auth/session 200 in 9ms
+ ✓ Compiled in 248ms (493 modules)
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ GET /onair?_rsc=zneel 200 in 26ms
+ ✓ Compiled /_not-found in 298ms (1648 modules)
+ GET /website.html 404 in 407ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/session 200 in 4ms
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`User`.`id` FROM `main`.`User` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE 1=1 ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` LEFT JOIN `main`.`User` AS `j1` ON (`j1`.`id`) = (`main`.`Show`.`moderatorId`) WHERE (`j1`.`name` = ? AND (`j1`.`id` IS NOT NULL)) ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+ GET /dashboard 200 in 137ms
+ GET /api/auth/session 200 in 10ms
+ GET /api/auth/session 200 in 4ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ GET /onair?_rsc=388j6 200 in 27ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `greetingsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 26ms
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ GET /onair?_rsc=1d9g1 200 in 135ms
+ GET /api/auth/session 200 in 12ms
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE 1=1 ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` LEFT JOIN `main`.`User` AS `j1` ON (`j1`.`id`) = (`main`.`Show`.`moderatorId`) WHERE (`j1`.`name` = ? AND (`j1`.`id` IS NOT NULL)) ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`User`.`id` FROM `main`.`User` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+ GET /dashboard?_rsc=1s28z 200 in 66ms
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE 1=1 ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+ GET /sendeplan?_rsc=piucm 200 in 16ms
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+ ○ Compiling /wuensche ...
+ GET /api/auth/session 200 in 19ms
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `greetingsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 373ms
+ GET /api/auth/session 200 in 9ms
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `greetingsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ POST /onair 200 in 205ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE 1=1 ORDER BY `main`.`User`.`role` ASC, `main`.`User`.`name` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE `main`.`Show`.`moderatorId` IN (?,?,?) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Warning`.`id`, `main`.`Warning`.`reason`, `main`.`Warning`.`userId`, `main`.`Warning`.`issuedBy`, `main`.`Warning`.`createdAt` FROM `main`.`Warning` WHERE `main`.`Warning`.`userId` IN (?,?,?) ORDER BY `main`.`Warning`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+ GET /admin?_rsc=13g80 200 in 32ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ GET /onair 200 in 116ms
+ GET /api/auth/session 200 in 8ms
+ GET /api/auth/session 200 in 4ms
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ GET /onair 200 in 50ms
+ GET /api/auth/session 200 in 9ms
+ GET /api/auth/session 200 in 5ms
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+ GET /onair 200 in 107ms
+ GET /api/auth/session 200 in 17ms
+ GET /api/auth/session 200 in 9ms
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`User`.`id` FROM `main`.`User` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT 1
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Jingle`.`id` FROM `main`.`Jingle` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Show`.`id` FROM `main`.`Show` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` LEFT JOIN `main`.`User` AS `j1` ON (`j1`.`id`) = (`main`.`Show`.`moderatorId`) WHERE (`j1`.`name` = ? AND (`j1`.`id` IS NOT NULL)) ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Show`.`id`, `main`.`Show`.`title`, `main`.`Show`.`description`, `main`.`Show`.`dayOfWeek`, `main`.`Show`.`startTime`, `main`.`Show`.`endTime`, `main`.`Show`.`color`, `main`.`Show`.`moderatorId`, `main`.`Show`.`createdAt`, `main`.`Show`.`updatedAt` FROM `main`.`Show` WHERE 1=1 ORDER BY `main`.`Show`.`dayOfWeek` ASC, `main`.`Show`.`startTime` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) FROM (SELECT `main`.`Document`.`id` FROM `main`.`Document` WHERE 1=1 LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE `main`.`User`.`id` IN (?) LIMIT ? OFFSET ?
+ GET /dashboard?_rsc=1s28z 200 in 41ms
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+prisma:query SELECT `main`.`Jingle`.`id`, `main`.`Jingle`.`title`, `main`.`Jingle`.`category`, `main`.`Jingle`.`duration`, `main`.`Jingle`.`description`, `main`.`Jingle`.`tags`, `main`.`Jingle`.`createdAt` FROM `main`.`Jingle` WHERE 1=1 ORDER BY `main`.`Jingle`.`category` ASC, `main`.`Jingle`.`title` ASC LIMIT ? OFFSET ?
+ GET /jingles?_rsc=zcqe3 200 in 66ms
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+prisma:query SELECT `main`.`Jingle`.`id`, `main`.`Jingle`.`title`, `main`.`Jingle`.`category`, `main`.`Jingle`.`duration`, `main`.`Jingle`.`description`, `main`.`Jingle`.`tags`, `main`.`Jingle`.`createdAt` FROM `main`.`Jingle` WHERE 1=1 ORDER BY `main`.`Jingle`.`category` ASC, `main`.`Jingle`.`title` ASC LIMIT ? OFFSET ?
+ GET /jingles?_rsc=jfwu4 200 in 19ms
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+prisma:query SELECT `main`.`Rule`.`id`, `main`.`Rule`.`title`, `main`.`Rule`.`content`, `main`.`Rule`.`category`, `main`.`Rule`.`order`, `main`.`Rule`.`createdAt` FROM `main`.`Rule` WHERE 1=1 ORDER BY `main`.`Rule`.`order` ASC LIMIT ? OFFSET ?
+ GET /regeln?_rsc=1kj1x 200 in 32ms
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+ ⚠ ./node_modules/@protobufjs/inquire/index.js
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/@protobufjs/inquire/index.js
+./node_modules/protobufjs/src/util/minimal.js
+./node_modules/protobufjs/src/index-minimal.js
+./node_modules/protobufjs/src/index-light.js
+./node_modules/protobufjs/src/index.js
+./node_modules/protobufjs/index.js
+./node_modules/@grpc/proto-loader/build/src/index.js
+./node_modules/@firebase/firestore/dist/index.node.mjs
+./node_modules/firebase/firestore/dist/index.mjs
+./app/actions/studio.ts
+./app/(main)/onair/page.tsx
+prisma:query SELECT `main`.`Document`.`id`, `main`.`Document`.`title`, `main`.`Document`.`description`, `main`.`Document`.`category`, `main`.`Document`.`fileUrl`, `main`.`Document`.`fileSize`, `main`.`Document`.`uploadedAt`, `main`.`Document`.`uploadedBy` FROM `main`.`Document` WHERE 1=1 ORDER BY `main`.`Document`.`uploadedAt` DESC LIMIT ? OFFSET ?
+ GET /dokumente?_rsc=1pyal 200 in 34ms
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT
+prisma:query UPDATE `main`.`StudioSettings` SET `greetingsOpen` = ? WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `greetingsOpen` AS `greetingsOpen`, `songRequestsOpen` AS `songRequestsOpen`
+[2026-05-25T20:00:25.073Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc11d error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:25.071Z)
+[2026-05-25T20:00:25.086Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc11e error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:25.071Z)
+[2026-05-25T20:00:26.412Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc11f error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:25.071Z)
+[2026-05-25T20:00:27.720Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc120 error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:25.071Z)
+[2026-05-25T20:00:30.688Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc121 error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:25.071Z)
+[2026-05-25T20:00:33.417Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc122 error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:25.071Z)
+[2026-05-25T20:00:40.891Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc123 error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:25.071Z)
+[2026-05-25T20:00:50.709Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc124 error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:25.071Z)
+[2026-05-25T20:00:57.134Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc125 error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:25.071Z)
+[2026-05-25T20:01:18.723Z]  @firebase/firestore: Firestore (12.13.0): GrpcConnection RPC 'Write' stream 0x344fc126 error. Code: 14 Message: 14 UNAVAILABLE: No connection established. Last error: connect ETIMEDOUT 142.251.14.95:443 (2026-05-25T20:00:46.104Z)
+ POST /onair 200 in 98185ms
+prisma:query SELECT 1
+prisma:query BEGIN IMMEDIATE
+prisma:query SELECT `main`.`StudioSettings`.`id` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE (`main`.`StudioSettings`.`id` = ? AND (`main`.`StudioSettings`.`id` = ? AND 1=1)) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`StudioSettings`.`id`, `main`.`StudioSettings`.`greetingsOpen`, `main`.`StudioSettings`.`songRequestsOpen` FROM `main`.`StudioSettings` WHERE `main`.`StudioSettings`.`id` = ? LIMIT ? OFFSET ?
+prisma:query COMMIT

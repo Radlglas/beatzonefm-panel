@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  password  String
+  role      String    @default("moderator")
+  createdAt DateTime  @default(now())
+  shows     Show[]
+  warnings  Warning[]
+}
+
+model Warning {
+  id        Int      @id @default(autoincrement())
+  reason    String
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  issuedBy  String
+  createdAt DateTime @default(now())
+}
+
+model Show {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  dayOfWeek   Int
+  startTime   String
+  endTime     String
+  color       String   @default("#7c3aed")
+  moderatorId Int
+  moderator   User     @relation(fields: [moderatorId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Document {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  category    String
+  fileUrl     String   @default("#")
+  fileSize    String?
+  uploadedAt  DateTime @default(now())
+  uploadedBy  String
+}
+
+model Rule {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  category  String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model StudioSettings {
+  id               Int     @id @default(1)
+  greetingsOpen    Boolean @default(false)
+  songRequestsOpen Boolean @default(false)
+}
+
+model Greeting {
+  id          Int      @id @default(autoincrement())
+  senderName  String
+  message     String
+  songRequest String?
+  isRead      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
+
+model Jingle {
+  id          Int      @id @default(autoincrement())
+  title       String
+  category    String
+  duration    String
+  description String?
+  tags        String   @default("")
+  createdAt   DateTime @default(now())
+}
